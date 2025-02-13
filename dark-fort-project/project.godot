@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Dark Fort Project"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/sprites/icon.svg"
+
+[autoload]
+
+Library="*res://scripts/library.gd"
 
 [file_customization]
 
@@ -24,4 +29,6 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.154876, 0.154876, 0.154876, 1)

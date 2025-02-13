@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw663s7hk2p3j"]
+
+[ext_resource type="PackedScene" uid="uid://lrssktl7qjns" path="res://scenes/kargunt.tscn" id="1_5msqa"]
+[ext_resource type="PackedScene" uid="uid://7ybe2reuyaek" path="res://scenes/dungeon.tscn" id="2_ieh1v"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Kargunt" parent="." instance=ExtResource("1_5msqa")]
+
+[node name="Dungeon" parent="." instance=ExtResource("2_ieh1v")]
