@@ -112,6 +112,12 @@ offset_right = 231.0
 offset_bottom = 141.0
 rotation = -0.376991
 
+[node name="InventoryLabel" type="Label" parent="Kargunt"]
+offset_left = 444.0
+offset_top = 17.0
+offset_right = 1121.0
+offset_bottom = 40.0
+
 [node name="Dungeon" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_d53fi")

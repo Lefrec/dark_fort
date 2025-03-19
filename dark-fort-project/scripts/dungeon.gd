@@ -2,9 +2,6 @@ extends Node2D
 
 var rooms : Array[Dictionary]
 
-func _ready():
-	generate_dungeon()
-
 func generate_dungeon():
 	rooms = [generate_entrance()]
 
