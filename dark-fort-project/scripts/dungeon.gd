@@ -1,16 +1,19 @@
 extends Node2D
 
 #Labels temporaires
-@onready var roomLabel = $RoomLabel
-@onready var eventLabel = $EventLabel
+@onready var roomLabel = $"../UI/RoomLabel"
+@onready var eventLabel = $"../UI/EventLabel"
 
 #Labels permanents
 @onready var kargunt = $"../Kargunt"
 
 var currentRoom : int :
 	set(value):
-		print(value)
 		roomLabel.text = str("Room ",value)
+
+var currentEvent : String :
+	set(value):
+		eventLabel.text = str(value)
 
 var rooms : Array[Dictionary]
 

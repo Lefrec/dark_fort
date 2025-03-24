@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dw663s7hk2p3j"]
+[gd_scene load_steps=10 format=3 uid="uid://dw663s7hk2p3j"]
 
 [ext_resource type="Script" path="res://scripts/kargunt.gd" id="1_5032w"]
 [ext_resource type="Texture2D" uid="uid://cqkn5cew215ne" path="res://assets/sprites/kargunt/K_right_hand_PH_v1.2.png" id="2_1vw2e"]
 [ext_resource type="Texture2D" uid="uid://chpnwchi0novu" path="res://assets/sprites/kargunt/K_left_hand_PH.png" id="3_f0lk2"]
 [ext_resource type="Texture2D" uid="uid://ctgmqab4liv7y" path="res://assets/sprites/kargunt/K_name_PH.png" id="4_xwdu1"]
 [ext_resource type="Script" path="res://scripts/dungeon.gd" id="5_d53fi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wblsw"]
+bg_color = Color(0.069984, 0.45667, 0.240492, 0.294118)
 
 [sub_resource type="Animation" id="Animation_b8hgp"]
 length = 2.0
@@ -70,6 +73,61 @@ _data = {
 
 [node name="Main" type="Node2D"]
 
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="HPLabel" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 163.0
+offset_right = 123.0
+offset_bottom = 186.0
+rotation = -0.376991
+
+[node name="SilverLabel" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = 153.0
+offset_top = 118.0
+offset_right = 231.0
+offset_bottom = 141.0
+rotation = -0.376991
+
+[node name="InventoryLabel" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = 460.0
+offset_top = 568.0
+offset_right = 737.0
+offset_bottom = 591.0
+autowrap_mode = 2
+
+[node name="RoomLabel" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = 340.0
+offset_top = 20.0
+offset_right = 460.0
+offset_bottom = 43.0
+autowrap_mode = 2
+
+[node name="EventLabel" type="Label" parent="UI"]
+layout_mode = 2
+offset_left = 466.0
+offset_top = 20.0
+offset_right = 870.0
+offset_bottom = 43.0
+autowrap_mode = 2
+
+[node name="Logs" type="RichTextLabel" parent="UI"]
+layout_mode = 2
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 949.0
+offset_top = 12.0
+offset_right = 1135.0
+offset_bottom = 142.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wblsw")
+
 [node name="Kargunt" type="Node2D" parent="."]
 script = ExtResource("1_5032w")
 
@@ -97,40 +155,5 @@ rotation = 0.301942
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("4_xwdu1")
 
-[node name="HPLabel" type="Label" parent="Kargunt"]
-offset_left = 45.0
-offset_top = 163.0
-offset_right = 123.0
-offset_bottom = 186.0
-rotation = -0.376991
-
-[node name="SilverLabel" type="Label" parent="Kargunt"]
-offset_left = 153.0
-offset_top = 118.0
-offset_right = 231.0
-offset_bottom = 141.0
-rotation = -0.376991
-
-[node name="InventoryLabel" type="Label" parent="Kargunt"]
-offset_left = 460.0
-offset_top = 568.0
-offset_right = 737.0
-offset_bottom = 591.0
-autowrap_mode = 2
-
 [node name="Dungeon" type="Node2D" parent="."]
 script = ExtResource("5_d53fi")
-
-[node name="RoomLabel" type="Label" parent="Dungeon"]
-offset_left = 424.0
-offset_top = 26.0
-offset_right = 544.0
-offset_bottom = 49.0
-autowrap_mode = 2
-
-[node name="EventLabel" type="Label" parent="Dungeon"]
-offset_left = 424.0
-offset_top = 26.0
-offset_right = 544.0
-offset_bottom = 49.0
-autowrap_mode = 2

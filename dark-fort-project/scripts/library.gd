@@ -1,5 +1,6 @@
 extends Node
 
+@onready var logs = $UI/Logs
 
 const base_weapon = {
 	"warhammer" : {"type":"weapon","name":"warhammer","price":9,"dmg_dice":6,"dmg_bonus":0,"hit_bonus":0},
@@ -29,3 +30,6 @@ func roll(dice:int,bonus:int):
 	var total = dice_roll+bonus
 	print(str("You rolled a ",total))
 	return total
+
+func log(text : String):
+	logs.append_text(text + "/n")

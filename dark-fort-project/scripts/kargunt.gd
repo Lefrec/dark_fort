@@ -1,23 +1,23 @@
 extends Node2D
 
 #Labels temporaires
-@onready var HPLabel = $HPLabel
-@onready var silverLabel = $SilverLabel
-@onready var inventoryLabel = $InventoryLabel
+@onready var hpLabel = $"../UI/HPLabel"
+@onready var silverLabel = $"../UI/SilverLabel"
+@onready var inventoryLabel = $"../UI/InventoryLabel"
 
 #Labels permanents
 @onready var dungeon = $"../Dungeon"
 
 
-var max_HP := 15
-var current_HP :int:
+var maxHP := 15
+var currentHP :int:
 	set(value):
 		if value <= 0:
 			print("You are dead")
 			value = 0
-		elif value > max_HP:
-				value = max_HP
-		HPLabel.text = str(value," / ",max_HP," HP")
+		elif value > maxHP:
+				value = maxHP
+		hpLabel.text = str(value," / ",maxHP," HP")
 var silver := 0:
 	set(value):
 		silverLabel.text = str(value, " Silver")
@@ -28,7 +28,7 @@ func _ready():
 
 func spawn_kargunt():
 	#defining base stats
-	current_HP = max_HP
+	currentHP = maxHP
 	silver = 15 + Library.roll(6,0)
 	#rolling for starting weapon
 	match Library.roll(4,0) :
