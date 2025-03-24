@@ -71,7 +71,6 @@ _data = {
 [node name="Main" type="Node2D"]
 
 [node name="Kargunt" type="Node2D" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_5032w")
 
 [node name="BasicSpriteAnimationTest" type="AnimationPlayer" parent="Kargunt"]
@@ -113,11 +112,25 @@ offset_bottom = 141.0
 rotation = -0.376991
 
 [node name="InventoryLabel" type="Label" parent="Kargunt"]
-offset_left = 444.0
-offset_top = 17.0
-offset_right = 1121.0
-offset_bottom = 40.0
+offset_left = 460.0
+offset_top = 568.0
+offset_right = 737.0
+offset_bottom = 591.0
+autowrap_mode = 2
 
 [node name="Dungeon" type="Node2D" parent="."]
-unique_name_in_owner = true
 script = ExtResource("5_d53fi")
+
+[node name="RoomLabel" type="Label" parent="Dungeon"]
+offset_left = 424.0
+offset_top = 26.0
+offset_right = 544.0
+offset_bottom = 49.0
+autowrap_mode = 2
+
+[node name="EventLabel" type="Label" parent="Dungeon"]
+offset_left = 424.0
+offset_top = 26.0
+offset_right = 544.0
+offset_bottom = 49.0
+autowrap_mode = 2

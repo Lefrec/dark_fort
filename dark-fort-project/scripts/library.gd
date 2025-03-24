@@ -1,5 +1,6 @@
 extends Node
 
+
 const base_weapon = {
 	"warhammer" : {"type":"weapon","name":"warhammer","price":9,"dmg_dice":6,"dmg_bonus":0,"hit_bonus":0},
 	"dagger" : {"type":"weapon","name":"dagger","price":6,"dmg_dice":4,"dmg_bonus":0,"hit_bonus":1},
@@ -11,6 +12,14 @@ const base_item = {
 	"armor" : {"type":"permanent","name":"armor","price":10},
 	"potion" : {"type":"consumable","name":"potion","price":4},
 	"scroll" : {"type":"consumable","name":"scroll","price":7},
+	"cloack" : {"type":"consumable","name":"cloack","price":15},
+}
+
+const random_item = {
+	"potion" : {"type":"consumable","name":"potion","price":4},
+	"rope" : {"type":"permanent","name":"rope","price":5},
+	"scroll" : {"type":"consumable","name":"scroll","price":7},
+	"armor" : {"type":"permanent","name":"armor","price":10},
 	"cloack" : {"type":"consumable","name":"cloack","price":15},
 }
 

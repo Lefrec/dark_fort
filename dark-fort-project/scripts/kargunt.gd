@@ -1,8 +1,13 @@
 extends Node2D
 
+#Labels temporaires
 @onready var HPLabel = $HPLabel
 @onready var silverLabel = $SilverLabel
 @onready var inventoryLabel = $InventoryLabel
+
+#Labels permanents
+@onready var dungeon = $"../Dungeon"
+
 
 var max_HP := 15
 var current_HP :int:
@@ -37,7 +42,9 @@ func spawn_kargunt():
 		2 : loot(Library.base_item.potion)
 		3 : loot(Library.base_item.scroll)
 		4 : loot(Library.base_item.cloack)
-	
+	if !dungeon.is_node_ready() :
+		await dungeon.ready
+	dungeon.generate_dungeon()
 
 func loot(item:Dictionary):
 	#Checking if the item is correctly defined with every key needed
