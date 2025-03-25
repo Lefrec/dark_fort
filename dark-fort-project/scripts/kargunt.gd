@@ -54,11 +54,13 @@ func loot(item:Dictionary):
 				print(item.name+" is a valid weapon, adding it to your inventory")
 				inventory.push_back(item)
 				inventoryLabel.text = str(inventory.map(func(item): return item.name))
+				Library.logs(str("You found a ",item.name))
 			else :
 				print(item.name+" is not a valid weapon, dmg_dice, dmg_bonus or hit_bonus is not defined !")
 		else :
 			print(item.name+" is a valid item, adding it to your inventory")
 			inventory.push_back(item)
 			inventoryLabel.text = str(inventory.map(func(item): return item.name))
+			Library.logs(str("You found a ",item.name))
 	else :
 		print("This item is not valid, type, name or price is not defined !")

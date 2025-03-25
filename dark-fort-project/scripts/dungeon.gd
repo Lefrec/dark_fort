@@ -30,15 +30,15 @@ func generate_entrance():
 	}
 	match door_roll :
 		1 : 
-			print("You find a random item")
+			Library.logs("You find a random item")
 			new_entrance.event = "You find a random item"
 		2 : 
-			print("A WEAK MONSTER stands guards")
+			Library.logs("A WEAK MONSTER stands guards")
 			new_entrance.event = "A WEAK MONSTER stands guards"
 		3 : 
-			print("A dying mystic gives you a random scroll")
+			Library.logs("A dying mystic gives you a random scroll")
 			new_entrance.event = "A dying mystic gives you a random scroll"
 		4 : 
-			print("The entrance is eerily quiet and desolate")
+			Library.logs("The entrance is eerily quiet and desolate")
 			new_entrance.event = "The entrance is eerily quiet and desolate"
 	return new_entrance
