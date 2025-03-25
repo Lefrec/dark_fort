@@ -18,13 +18,14 @@ var currentEvent : String :
 var rooms : Array[Dictionary]
 
 func generate_dungeon():
-	currentRoom = 0
 	rooms = [generate_entrance()]
+	currentRoom = 0
 
 func generate_entrance():
 	var door_roll = Library.roll(4,0)
 	var new_entrance = {
-		"NB_door" = door_roll,
+		"NBDoor" = door_roll,
+		"neighbor" = [],
 		"visited" = true,
 		"explored" = false
 	}
@@ -39,3 +40,16 @@ func generate_entrance():
 			new_entrance.event = "The entrance is eerily quiet and desolate"
 	Library.logs(new_entrance.event)
 	return new_entrance
+
+func generate_room():
+		1 :
+			door_roll = 0
+		2,3 :
+			door_roll = 1
+		4 :
+			door_roll = 2
+	var new_room = {
+		"neighbor" = [currentRoom],
+		"visited" = true,
+		"explored" = false
+	}
