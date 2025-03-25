@@ -3,9 +3,6 @@ extends Node
 @onready var logsRichText = get_node("/root/Main/UI/LogsRichText")
 
 
-func _ready():
-	pass
-
 const base_weapon = {
 	"warhammer" : {"type":"weapon","name":"warhammer","price":9,"dmg_dice":6,"dmg_bonus":0,"hit_bonus":0},
 	"dagger" : {"type":"weapon","name":"dagger","price":6,"dmg_dice":4,"dmg_bonus":0,"hit_bonus":1},

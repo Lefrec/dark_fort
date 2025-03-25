@@ -27,6 +27,7 @@ func _ready():
 	spawn_kargunt()
 
 func spawn_kargunt():
+	Library.logs("[u]THE CATACOMB ROGUE[/u] enters the stage")
 	#defining base stats
 	currentHP = maxHP
 	silver = 15 + Library.roll(6,0)
